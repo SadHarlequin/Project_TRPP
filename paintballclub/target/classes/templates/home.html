@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url(background.png);
+        }
+        title1{
+            text-align:center;
+            border-radius: 200px;
+            padding-left: 3em;
+            padding-right:3em;
+            padding-top:1em;
+            padding-bottom:1em;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right:auto;
+            background: #EE82EE;
+            box-shadow: 0px 0px 20px 10px #4b0082;
+        }
+    </style>
+</head>
+<body>
+<br>
+<h1><title1><font color="black">Добро пожаловать на главную страницу!</font></title1></h1>
+<br><br>
+<title1>
+<a href="/settime" class="baseclass" th:classappend="${isAdmin} ? adminclass : userclass"><input type="submit" value="задать митинг"></a>
+<a href="/setmeeting"><input type="submit" value="Записаться на дату встречи"></a>
+<a href="/registration"><input type="submit" value="Регистрация"></a>
+<a href="/login"><input type="submit" value="Авторизация"></a>
+    <a href="/pc"><input type="submit" value="Личный кабинет"></a>
+<a href="/logout"><input type="submit" value="Выйти из системы"></a>
+
+</title1>
+</body>
+</html>

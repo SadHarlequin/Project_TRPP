@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <style>
+        body{
+            background-image: url(background.png);
+        }
+        title1{
+            text-align:center;
+            border-radius: 200px;
+            padding-left: 3em;
+            padding-right:3em;
+            padding-top:1em;
+            padding-bottom:1em;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right:auto;
+            background: #EE82EE;
+            box-shadow: 0px 0px 20px 10px #4b0082;
+        }
+        title2{
+            text-align:center;
+            border-radius: 200px;
+            padding-left: 3em;
+            padding-right:3em;
+            padding-top: 1em;
+            padding-bottom:6em;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right:auto;
+            background: #EE82EE;
+            box-shadow: 0px 0px 20px 10px #4b0082;
+        }
+        a{
+            margin-left: 3em;
+        }
+    </style>
+</head>
+<body>
+<form th:action="@{/login}" method="post">
+    <br>
+    <h3><title1>Авторизация</title1></h3>
+    <br><br>
+    <div><title2><input type="text" name="username" placeholder="Логин"/>
+    <input type="password" name="password" placeholder="Пароль"/>
+    </title2>
+        <br>
+        <br>
+    <a href="/registration">Регистрация</a>
+        <br>
+        <br>
+        <a><input type="submit" value="Авторизоваться" /></a>
+    </div>
+</form>
+</body>
+</html>
